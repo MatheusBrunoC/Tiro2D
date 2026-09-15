@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+#informacoes {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+canvas {
+    background-color: #050505;
+    border: 2px solid white;
+}
+
+#jogo {
+    display: block;
+
+    margin: 0 auto;
+
+    background-color: #050505;
+
+    border: 2px solid white;
+}
+
+#mensagem {
+    margin-top: 20px;
+
+    font-size: 32px;
+    font-weight: bold;
+}
