@@ -201,10 +201,9 @@ function atualizarInimigos() {
     for (let i = inimigos.length - 1; i >= 0; i--) {
         inimigos[i].y += inimigos[i].velocidade;
 
-        if (inimigos[i].y > canvas.height) {
-
+        // Verifica se o inimigo bateu na nave
+        if (verificarColisao(inimigos[i], jogador)) {
             vidas--;
-
             vidasElemento.textContent = vidas;
 
             inimigos.splice(i, 1);
@@ -212,6 +211,13 @@ function atualizarInimigos() {
             if (vidas <= 0) {
                 gameOver = true;
             }
+
+            continue;
+        }
+
+        // Se o inimigo sair do quadro, apenas remove
+        if (inimigos[i].y > canvas.height) {
+            inimigos.splice(i, 1);
         }
     }
 }
